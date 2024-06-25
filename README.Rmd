@@ -1,0 +1,24 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Early Diagnosis SII and change in SII
+
+Calculate the Slope Index of Inequality (SII) for the early diagnosis of cancer
+by Integrated Care Board (ICB) for 2022 and 2023. First it calculates early
+diagnosis proportion as incidence at stages 1 and 2 out of all staged incidence.
+
+For each ICB and time period, the early diagnosis proportion is fit to a linear
+regression, weighted using inverse variance weighting. SII is the gradient of
+the model.
+
+```{r main}
+source("early_diagnosis_sii.R")
+
+ed_model_outputs |> 
+  filter(YEAR == "2023")
+```

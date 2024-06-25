@@ -51,3 +51,6 @@ rsconnect/
 # data folders
 data/
 output/
+
+# README preview
+README.html
