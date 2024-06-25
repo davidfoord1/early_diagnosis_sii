@@ -3,7 +3,13 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
 ```
 
 ## Early Diagnosis SII and change in SII
@@ -18,7 +24,6 @@ the model.
 
 ```{r main}
 source("early_diagnosis_sii.R")
-
 ed_model_outputs |> 
   filter(YEAR == "2023")
 ```
